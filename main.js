@@ -50,3 +50,19 @@ insertContent("#answer2", convertToUl(q2List));
 
 
 //question 3
+
+var gbp = items.map(function(el){
+  return {
+    currency_code: el.currency_code,
+    title: el.title,
+    price: el.price
+  }
+});
+
+  gbp = gbp.filter(function(el){
+  return el.currency_code === "GBP";
+});
+
+
+
+insertContent("#answer3", convertHTML(gbp[0].title + " " + gbp[0].price + gbp[0].currency_code, "p"));
