@@ -4,6 +4,7 @@ function insertContent(selector, content) {
     if (typeof content === "string") {
       element.innerHTML = content;
     } else {
+      element.textContent = "";
       element.appendChild(content);
     }
     return element;
