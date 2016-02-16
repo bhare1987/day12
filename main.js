@@ -106,3 +106,12 @@ function convertMaterialsList(array) {
 };
 
 insertContent("#answer5", convertMaterialsList(materialsList));
+
+//question 6
+
+
+var whoMade = items.filter(function(el){
+  return el.who_made === "i_did";
+}).length;
+
+insertContent("#answer6", convertHTML(whoMade, "p"));
